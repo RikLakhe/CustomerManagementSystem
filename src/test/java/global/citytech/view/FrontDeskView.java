@@ -86,13 +86,13 @@ public class FrontDeskView {
         String selectPackage = readLine();
         switch (selectPackage) {
             case "1":
-                System.out.println(CustomerRegistrationServiceFactory.get(customerType).payCustomerByPrice(foundCustomer, 400));
+                System.out.println(CustomerRegistrationServiceFactory.get(customerType).payCustomerByPrice(foundCustomer, 400, "Only Gym"));
                 break;
             case "2":
-                System.out.println(CustomerRegistrationServiceFactory.get(customerType).payCustomerByPrice(foundCustomer, 500));
+                System.out.println(CustomerRegistrationServiceFactory.get(customerType).payCustomerByPrice(foundCustomer, 500, "Gym and Zumba"));
                 break;
             case "3":
-                System.out.println(CustomerRegistrationServiceFactory.get(customerType).payCustomerByPrice(foundCustomer, 600));
+                System.out.println(CustomerRegistrationServiceFactory.get(customerType).payCustomerByPrice(foundCustomer, 600, "Quick Fix"));
                 break;
             default:
                 System.out.println("Invalid input! Pay process terminated!");
@@ -185,6 +185,4 @@ public class FrontDeskView {
         );
         CustomerRegistrationServiceFactory.get("vip").register(vipCustomer);
     }
-
-
 }

@@ -11,5 +11,5 @@ public interface CustomerRegistrationService {
     String register(Customer customer);
     void findCustomer(String customerName);
     Customer findCustomerByIdentifier(String customerId);
-    String payCustomerByPrice(Customer customer,int packagePrice);
+    String payCustomerByPrice(Customer customer,int packagePrice, String packageName);
 }

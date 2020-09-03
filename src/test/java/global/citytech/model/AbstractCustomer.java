@@ -31,45 +31,45 @@ abstract class AbstractCustomer implements Customer {
         return name;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getJoinYear() {
-        return joinYear;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setJoinYear(String joinYear) {
-        this.joinYear = joinYear;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public boolean isPaidForMembership() {
-        return paidForMembership;
-    }
+//    public String getAddress() {
+//        return address;
+//    }
+//
+//    public String getEmail() {
+//        return email;
+//    }
+//
+//    public String getJoinYear() {
+//        return joinYear;
+//    }
+//
+//    public int getAge() {
+//        return age;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public void setAddress(String address) {
+//        this.address = address;
+//    }
+//
+//    public void setEmail(String email) {
+//        this.email = email;
+//    }
+//
+//    public void setJoinYear(String joinYear) {
+//        this.joinYear = joinYear;
+//    }
+//
+//    public void setAge(int age) {
+//        this.age = age;
+//    }
+//
+//    public boolean isPaidForMembership() {
+//        return paidForMembership;
+//    }
 
     public void setPaidForMembership(boolean paidForMembership) {
         this.paidForMembership = paidForMembership;
@@ -79,13 +79,13 @@ abstract class AbstractCustomer implements Customer {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+//    public void setId(String id) {
+//        this.id = id;
+//    }
 
-    public String getJoinPackage() {
-        return joinPackage;
-    }
+//    public String getJoinPackage() {
+//        return joinPackage;
+//    }
 
     public void setJoinPackage(String joinPackage) {
         this.joinPackage = joinPackage;

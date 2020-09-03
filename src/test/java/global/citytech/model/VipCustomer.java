@@ -15,21 +15,21 @@ public class VipCustomer extends AbstractCustomer {
         this.discount = discount;
     }
 
-    public String getPersonalTrainer() {
-        return personalTrainer;
-    }
-
-    public void setPersonalTrainer(String personalTrainer) {
-        this.personalTrainer = personalTrainer;
-    }
+//    public String getPersonalTrainer() {
+//        return personalTrainer;
+//    }
+//
+//    public void setPersonalTrainer(String personalTrainer) {
+//        this.personalTrainer = personalTrainer;
+//    }
 
     public double getDiscount() {
         return discount;
     }
 
-    public void setDiscount(double discount) {
-        this.discount = discount;
-    }
+//    public void setDiscount(double discount) {
+//        this.discount = discount;
+//    }
 
     public void show() {
         System.out.println("Id='" + id + '\'' +
@@ -39,6 +39,6 @@ public class VipCustomer extends AbstractCustomer {
                 ", Join Year='" + joinYear + '\'' +
                 ", Age=" + age +
                 ", Personal Trainer='" + personalTrainer + '\'' +
-                ", Paid =" + (paidForMembership ? "YES" : "NO"));
+                ", Paid ='" + (paidForMembership ? "YES" + '\'' + ", Package='" + joinPackage : "NO") + '\'');
     }
 }

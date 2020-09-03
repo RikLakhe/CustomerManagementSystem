@@ -63,9 +63,10 @@ class NormalCustomerRegistrationServiceImpl implements CustomerRegistrationServi
     }
 
     @Override
-    public String payCustomerByPrice(Customer customer, int packagePrice) {
+    public String payCustomerByPrice(Customer customer, int packagePrice, String packageName) {
         NormalCustomer normalCustomer = (NormalCustomer) customer;
         normalCustomer.setPaidForMembership(true);
+        normalCustomer.setJoinPackage(packageName);
         return "Paid";
     }
 }

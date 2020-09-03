@@ -66,12 +66,13 @@ class VipCustomerRegistrationServiceImpl implements CustomerRegistrationService 
     }
 
     @Override
-    public String payCustomerByPrice(Customer customer, int packagePrice) {
+    public String payCustomerByPrice(Customer customer, int packagePrice, String packageName) {
         VipCustomer vipCustomer = (VipCustomer) customer;
         double discount = vipCustomer.getDiscount();
         double actualPrice = packagePrice - packagePrice * (discount / 100);
         System.out.println("Actual price : Rs. " + actualPrice);
         vipCustomer.setPaidForMembership(true);
+        vipCustomer.setJoinPackage(packageName);
         return "Paid";
     }
 }

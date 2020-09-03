@@ -13,13 +13,13 @@ public class NormalCustomer extends AbstractCustomer {
         this.workoutTime = workoutTime;
     }
 
-    public String getWorkoutTime() {
-        return workoutTime;
-    }
-
-    public void setWorkoutTime(String workoutTime) {
-        this.workoutTime = workoutTime;
-    }
+//    public String getWorkoutTime() {
+//        return workoutTime;
+//    }
+//
+//    public void setWorkoutTime(String workoutTime) {
+//        this.workoutTime = workoutTime;
+//    }
 
     public void show() {
         System.out.println("Id='" + id + '\'' +
@@ -29,6 +29,6 @@ public class NormalCustomer extends AbstractCustomer {
                 ", Join Year='" + joinYear + '\'' +
                 ", Age=" + age +
                 ", Workout Time='" + workoutTime + '\'' +
-                ", Paid =" + (paidForMembership ? "YES" : "NO"));
+                ", Paid ='" + (paidForMembership ? "YES" + '\'' + ", Package='" + joinPackage : "NO") + '\'');
     }
 }
