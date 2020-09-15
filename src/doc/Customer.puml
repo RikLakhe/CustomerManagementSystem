@@ -1,0 +1,104 @@
+@startuml
+
+namespace model  {
+abstract class AbstractCustomer implements Customer{
+    ~ String id
+    ~ String name
+    ~ String address
+    ~ String email
+    ~ String joinYear
+    ~ String joinPackage
+    ~ Int age
+    ~ Boolean paidForMembership
+    --Getter--
+    + String getName()
+    + String getId()
+    --Setter--
+    + void setPaidForMembership(boolean)
+    + void setJoinPackage(String)
+}
+
+class VipCustomer extends AbstractCustomer{
+    ~ String personalTrainer
+    ~ double discount
+    --Getter--
+    + double getDiscount()
+    + void show()
+}
+class NormalCustomer extends AbstractCustomer{
+    ~ String workoutTime
+    --Getter--
+    + void show()
+}
+
+interface Customer{}
+}
+
+namespace services {
+interface CustomerRegistrationService{
+    + String register(Customer)
+    + void findCustomer (String)
+    + Customer findCustomerByIdentifier(String)
+    + String payCustomerByPrice(Customer, int, String)
+}
+
+class CustomerRegistrationServiceFactory{
+    - CustomerRegistrationService normalRegistrationService
+    - CustomerRegistrationService vipRegistrationService
+    + CustomerRegistrationService get(String)
+}
+
+CustomerRegistrationService "1" *--> "1" CustomerRegistrationServiceFactory
+
+class NormalCustomerRegistrationServiceImpl implements CustomerRegistrationService{
+    - List<NormalCustomer> normalCustomers
+    - Logger Logger
+    + String register(Customer)
+    + void findCustomer(String)
+    + Customer findCustomerByIdentifier(String)
+    + String payCustomerByPrice(Customer, int, String)
+}
+
+class VipCustomerRegistrationServiceImpl implements CustomerRegistrationService{
+    - List<VipCustomer> vipCustomers
+    - Logger Logger
+    + String register(Customer)
+    + void findCustomer(String)
+    + Customer findCustomerByIdentifier(String)
+    + String payCustomerByPrice(Customer, int, String)
+}
+
+CustomerRegistrationServiceFactory ..> VipCustomerRegistrationServiceImpl : create
+CustomerRegistrationServiceFactory ..> NormalCustomerRegistrationServiceImpl : create
+}
+
+services.VipCustomerRegistrationServiceImpl "1" *-- "*" model.VipCustomer
+services.NormalCustomerRegistrationServiceImpl "1" *-- "*" model.NormalCustomer
+
+namespace view {
+class FrontDeskView{
+    - String readLine()
+    - Int readInLine()
+    - void customerPayProcess()
+    - void packagePaymentProcess()
+    - void customerFindProcess()
+    - void customerRegistrationProcess()
+    - boolean customerRegistrationSelectionProcess(String,String, String, int)
+    - void registerNormalCustomer(String,String,String,String,int)
+    - void registerVipCustomer(String,String,String,String,int)
+}
+}
+
+view.FrontDeskView ..> model.VipCustomer
+view.FrontDeskView ..> model.NormalCustomer
+view.FrontDeskView ..> services.CustomerRegistrationServiceFactory
+view.FrontDeskView ..> model.Customer
+services.CustomerRegistrationService ..> model.Customer
+
+
+class CustomerManagementSystem{
+    + void main(String[])
+}
+
+CustomerManagementSystem ..> view.FrontDeskView
+@enduml

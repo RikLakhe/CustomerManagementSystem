@@ -1,82 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Diagram>
   <ID>JAVA</ID>
-  <OriginalElement>global.citytech.model.Customer</OriginalElement>
+  <OriginalElement>global.citytech.cms.model.Customer</OriginalElement>
   <nodes>
-    <node x="1046.0" y="671.5">global.citytech.services.VipCustomerRegistrationServiceImpl</node>
-    <node x="1806.0" y="79.5">global.citytech.model.AbstractCustomer</node>
-    <node x="1498.5" y="495.5">global.citytech.model.VipCustomer</node>
-    <node x="566.0" y="936.0">global.citytech.services.CustomerRegistrationService</node>
-    <node x="1184.0" y="1105.0">global.citytech.model.Customer</node>
-    <node x="46.0" y="671.5">global.citytech.services.NormalCustomerRegistrationServiceImpl</node>
-    <node x="147.0" y="199.5">global.citytech.model.NormalCustomer</node>
-    <node x="542.0" y="707.5">global.citytech.services.CustomerRegistrationServiceFactory</node>
+    <node x="10.5" y="475.0">global.citytech.cms.model.NormalCustomer</node>
+    <node x="446.7031609195403" y="857.0">global.citytech.cms.services.CustomerRegistrationServiceFactory</node>
+    <node x="343.7500000000001" y="80.0">global.citytech.cms.model.AbstractCustomer</node>
+    <node x="128.45833333333326" y="1022.0">global.citytech.cms.view.FrontDeskView</node>
+    <node x="721.2500000000001" y="630.0">global.citytech.cms.services.VipCustomerRegistrationServiceImpl</node>
+    <node x="468.2500000000001" y="451.5">global.citytech.cms.services.CustomerRegistrationService</node>
+    <node x="307.95833333333326" y="1369.0">global.citytech.cms.CustomerManagementSystem</node>
+    <node x="435.5307471264367" y="0.0">global.citytech.cms.model.Customer</node>
+    <node x="986.6557471264368" y="451.0">global.citytech.cms.model.VipCustomer</node>
+    <node x="90.75" y="630.0">global.citytech.cms.services.NormalCustomerRegistrationServiceImpl</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="global.citytech.model.NormalCustomer" target="global.citytech.model.AbstractCustomer">
-      <point x="93.0" y="-0.0" />
-      <point x="-154.0" y="-0.0" />
+    <edge source="global.citytech.cms.services.CustomerRegistrationServiceFactory" target="global.citytech.cms.services.VipCustomerRegistrationServiceImpl">
+      <point x="163.5" y="-52.5" />
+      <point x="828.2031609195403" y="832.0" />
+      <point x="915.2500000000001" y="832.0" />
+      <point x="0.0" y="88.5" />
     </edge>
-    <edge source="global.citytech.services.VipCustomerRegistrationServiceImpl" target="global.citytech.services.CustomerRegistrationService">
-      <point x="-40.0" y="88.5" />
-      <point x="1200.0" y="1000.0" />
-      <point x="194.0" y="-0.0" />
+    <edge source="global.citytech.cms.services.CustomerRegistrationServiceFactory" target="global.citytech.cms.services.NormalCustomerRegistrationServiceImpl">
+      <point x="-163.5" y="-52.5" />
+      <point x="501.2031609195403" y="832.0" />
+      <point x="284.75" y="832.0" />
+      <point x="0.0" y="88.5" />
     </edge>
-    <edge source="global.citytech.services.CustomerRegistrationServiceFactory" target="global.citytech.services.NormalCustomerRegistrationServiceImpl">
-      <point x="-218.0" y="-0.0" />
-      <point x="194.0" y="-0.0" />
+    <edge source="global.citytech.cms.services.NormalCustomerRegistrationServiceImpl" target="global.citytech.cms.services.CustomerRegistrationService">
+      <point x="145.5000000000001" y="-88.5" />
+      <point x="430.2500000000001" y="605.0" />
+      <point x="516.7500000000001" y="605.0" />
+      <point x="-145.5" y="64.0" />
     </edge>
-    <edge source="global.citytech.services.CustomerRegistrationServiceFactory" target="global.citytech.services.CustomerRegistrationService">
-      <point x="0.0" y="52.5" />
+    <edge source="global.citytech.cms.view.FrontDeskView" target="global.citytech.cms.model.VipCustomer">
+      <point x="249.58333333333331" y="-148.5" />
+      <point x="677.5416666666665" y="1002.0" />
+      <point x="1130.75" y="1002.0" />
+      <point x="1130.75" y="605.0" />
+      <point x="1164.2807471264368" y="605.0" />
+      <point x="76.125" y="64.5" />
+    </edge>
+    <edge source="global.citytech.cms.model.NormalCustomer" target="global.citytech.cms.model.AbstractCustomer">
+      <point x="-46.5" y="-40.5" />
+      <point x="57.0" y="421.0" />
+      <point x="382.2500000000001" y="421.0" />
+      <point x="-115.5" y="160.5" />
+    </edge>
+    <edge source="global.citytech.cms.services.VipCustomerRegistrationServiceImpl" target="global.citytech.cms.model.VipCustomer">
+      <point x="48.5" y="-88.5" />
+      <point x="963.7500000000001" y="605.0" />
+      <point x="1012.0307471264368" y="605.0" />
+      <point x="-76.125" y="64.5" />
+    </edge>
+    <edge source="global.citytech.cms.services.CustomerRegistrationService" target="global.citytech.cms.model.Customer">
       <point x="0.0" y="-64.0" />
+      <point x="662.2500000000001" y="60.0" />
+      <point x="513.9307471264367" y="60.0" />
+      <point x="22.399999999999977" y="15.0" />
     </edge>
-    <edge source="global.citytech.services.VipCustomerRegistrationServiceImpl" target="global.citytech.model.Customer">
-      <point x="0.0" y="88.5" />
-      <point x="0.0" y="-15.0" />
+    <edge source="global.citytech.cms.services.CustomerRegistrationServiceFactory" target="global.citytech.cms.services.CustomerRegistrationService">
+      <point x="54.5" y="-52.5" />
+      <point x="719.2031609195403" y="832.0" />
+      <point x="663.9839080459769" y="832.0" />
+      <point x="663.9839080459769" y="605.0" />
+      <point x="710.7500000000001" y="605.0" />
+      <point x="48.5" y="64.0" />
     </edge>
-    <edge source="global.citytech.services.CustomerRegistrationService" target="global.citytech.model.Customer">
-      <point x="0.0" y="64.0" />
-      <point x="760.0" y="1110.0" />
-      <point x="-56.0" y="-10.0" />
+    <edge source="global.citytech.cms.view.FrontDeskView" target="global.citytech.cms.services.CustomerRegistrationServiceFactory">
+      <point x="49.91666666666674" y="-148.5" />
+      <point x="477.875" y="982.0" />
+      <point x="664.7031609195403" y="982.0" />
+      <point x="0.0" y="52.5" />
     </edge>
-    <edge source="global.citytech.model.AbstractCustomer" target="global.citytech.model.Customer">
-      <point x="0.0" y="160.5" />
-      <point x="1960.0" y="1120.0" />
-      <point x="56.0" y="-0.0" />
+    <edge source="global.citytech.cms.view.FrontDeskView" target="global.citytech.cms.model.Customer">
+      <point x="-249.5833333333332" y="-148.5" />
+      <point x="178.37500000000006" y="1002.0" />
+      <point x="0.0" y="1002.0" />
+      <point x="0.0" y="50.0" />
+      <point x="446.73074712643677" y="50.0" />
+      <point x="-44.80000000000001" y="15.0" />
     </edge>
-    <edge source="global.citytech.services.NormalCustomerRegistrationServiceImpl" target="global.citytech.model.Customer">
-      <point x="0.0" y="88.5" />
-      <point x="240.0" y="1120.0" />
-      <point x="-56.0" y="-0.0" />
+    <edge source="global.citytech.cms.services.NormalCustomerRegistrationServiceImpl" target="global.citytech.cms.model.NormalCustomer">
+      <point x="-145.4999999999999" y="-88.5" />
+      <point x="139.2500000000001" y="605.0" />
+      <point x="126.75" y="605.0" />
+      <point x="23.25" y="40.5" />
     </edge>
-    <edge source="global.citytech.services.CustomerRegistrationServiceFactory" target="global.citytech.services.VipCustomerRegistrationServiceImpl">
-      <point x="218.0" y="-0.0" />
-      <point x="-194.0" y="-0.0" />
+    <edge source="global.citytech.cms.services.VipCustomerRegistrationServiceImpl" target="global.citytech.cms.model.Customer">
+      <point x="-48.5" y="-88.5" />
+      <point x="866.7500000000001" y="50.0" />
+      <point x="536.3307471264368" y="50.0" />
+      <point x="44.80000000000001" y="15.0" />
     </edge>
-    <edge source="global.citytech.services.NormalCustomerRegistrationServiceImpl" target="global.citytech.services.CustomerRegistrationService">
-      <point x="40.0" y="88.5" />
-      <point x="280.0" y="1000.0" />
-      <point x="-194.0" y="-0.0" />
+    <edge source="global.citytech.cms.model.VipCustomer" target="global.citytech.cms.model.AbstractCustomer">
+      <point x="-50.75" y="-64.5" />
+      <point x="1037.4057471264368" y="431.0" />
+      <point x="536.2500000000001" y="431.0" />
+      <point x="38.5" y="160.5" />
     </edge>
-    <edge source="global.citytech.services.VipCustomerRegistrationServiceImpl" target="global.citytech.model.VipCustomer">
-      <point x="194.0" y="-0.0" />
-      <point x="1600.0" y="760.0" />
-      <point x="0.0" y="64.5" />
+    <edge source="global.citytech.cms.CustomerManagementSystem" target="global.citytech.cms.view.FrontDeskView">
+      <point x="-60.0" y="-28.0" />
+      <point x="367.95833333333326" y="1344.0" />
+      <point x="278.20833333333326" y="1344.0" />
+      <point x="-149.75" y="148.5" />
     </edge>
-    <edge source="global.citytech.model.VipCustomer" target="global.citytech.model.AbstractCustomer">
-      <point x="101.5" y="-0.0" />
-      <point x="1920.0" y="560.0" />
-      <point x="-40.0" y="160.5" />
+    <edge source="global.citytech.cms.view.FrontDeskView" target="global.citytech.cms.model.NormalCustomer">
+      <point x="-49.91666666666657" y="-148.5" />
+      <point x="378.0416666666667" y="982.0" />
+      <point x="80.25" y="982.0" />
+      <point x="-23.25" y="40.5" />
     </edge>
-    <edge source="global.citytech.services.NormalCustomerRegistrationServiceImpl" target="global.citytech.model.NormalCustomer">
-      <point x="-194.0" y="-0.0" />
-      <point x="0.0" y="760.0" />
-      <point x="0.0" y="240.0" />
-      <point x="-93.0" y="-0.0" />
+    <edge source="global.citytech.cms.services.NormalCustomerRegistrationServiceImpl" target="global.citytech.cms.model.Customer">
+      <point x="48.500000000000114" y="-88.5" />
+      <point x="333.2500000000001" y="60.0" />
+      <point x="469.13074712643675" y="60.0" />
+      <point x="-22.399999999999977" y="15.0" />
+    </edge>
+    <edge source="global.citytech.cms.model.AbstractCustomer" target="global.citytech.cms.model.Customer">
+      <point x="0.0" y="-160.5" />
+      <point x="497.7500000000001" y="60.0" />
+      <point x="491.5307471264367" y="60.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="global.citytech.cms.services.VipCustomerRegistrationServiceImpl" target="global.citytech.cms.services.CustomerRegistrationService">
+      <point x="-145.5" y="-88.5" />
+      <point x="769.7500000000001" y="605.0" />
+      <point x="807.7500000000001" y="605.0" />
+      <point x="145.5" y="64.0" />
     </edge>
   </edges>
-  <settings layout="Directed Orthogonal" zoom="0.8125874125874126" x="261.5521476611674" y="753.9450311802541" />
+  <settings layout="Hierarchic Group" zoom="1.0380622837370241" x="485.20833333333337" y="1170.895" />
   <SelectedNodes />
   <Categories>
     <Category>Fields</Category>

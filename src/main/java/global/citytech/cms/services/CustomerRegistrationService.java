@@ -3,9 +3,9 @@
  * Created at: 9/2/20, 3:44 PM
  */
 
-package global.citytech.services;
+package global.citytech.cms.services;
 
-import global.citytech.model.Customer;
+import global.citytech.cms.model.Customer;
 
 public interface CustomerRegistrationService {
     String register(Customer customer);

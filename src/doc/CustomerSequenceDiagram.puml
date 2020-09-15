@@ -1,0 +1,5 @@
+@startuml
+
+Customer -> FrontDesk: Register
+
+@enduml

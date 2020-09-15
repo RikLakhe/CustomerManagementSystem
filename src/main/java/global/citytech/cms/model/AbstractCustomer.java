@@ -3,7 +3,7 @@
  * Created at: 9/2/20, 3:39 PM
  */
 
-package global.citytech.model;
+package global.citytech.cms.model;
 
 import java.util.UUID;
 

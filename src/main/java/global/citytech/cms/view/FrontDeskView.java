@@ -1,5 +1,10 @@
 /*
  * User: RikeshLalShrestha
+ * Created at: 9/4/20, 5:10 PM
+ */
+
+/*
+ * User: RikeshLalShrestha
  * Created at: 9/3/20, 3:49 PM
  */
 
@@ -8,12 +13,12 @@
  * Created at: 9/3/20, 3:34 PM
  */
 
-package global.citytech.view;
+package global.citytech.cms.view;
 
-import global.citytech.model.Customer;
-import global.citytech.model.NormalCustomer;
-import global.citytech.model.VipCustomer;
-import global.citytech.services.CustomerRegistrationServiceFactory;
+import global.citytech.cms.model.Customer;
+import global.citytech.cms.model.NormalCustomer;
+import global.citytech.cms.model.VipCustomer;
+import global.citytech.cms.services.CustomerRegistrationServiceFactory;
 
 import java.util.Scanner;
 

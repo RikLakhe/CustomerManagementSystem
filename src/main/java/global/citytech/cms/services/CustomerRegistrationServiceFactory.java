@@ -3,7 +3,7 @@
  * Created at: 9/3/20, 6:17 PM
  */
 
-package global.citytech.services;
+package global.citytech.cms.services;
 
 public class CustomerRegistrationServiceFactory {
     private static CustomerRegistrationService normalRegistrationService = null;

@@ -3,10 +3,10 @@
  * Created at: 9/3/20, 6:16 PM
  */
 
-package global.citytech.services;
+package global.citytech.cms.services;
 
-import global.citytech.model.Customer;
-import global.citytech.model.NormalCustomer;
+import global.citytech.cms.model.Customer;
+import global.citytech.cms.model.NormalCustomer;
 
 import java.util.ArrayList;
 import java.util.List;
